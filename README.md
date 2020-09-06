@@ -16,6 +16,12 @@ The system consists of several components working concurrently in conjunction. S
 There is also a shared <b>blocking queue</b> - Job queue, used for assigning and starting jobs.
 ![Alt text](images/image.png?raw=true "")
 
+## Component details:
 
-## Overview
-The system consists of several components that work in conjunction. 
+### Directory crawler:
+This component recursively scans specified directories for text corpuses (directories with a prefix "corpus_" which contain text files). <br>
+After finding a corpus, it is checked if the <u>Last modified</u> directory attribute has changed since the last scan. <br> 
+If that's the case, a new Job is created and submited to the Job queue.<br>
+After finishing a scan cycle, the component pauses before the next scan for a specified (configuration file) amount of time.
+
+### Job queue:
