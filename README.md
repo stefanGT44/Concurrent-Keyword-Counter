@@ -25,7 +25,7 @@ If that's the case, a new Job is created and submited to the Job queue.<br>
 After finishing a scan cycle the component pauses (duration specified in the config file) before starting the next scan.
 
 ### Job queue:
-The components directory crawler, CLI and web scanner can currently write to the Job queue.<br>
+Only the components directory crawler, CLI and web scanner can write to the Job queue.<br>
 Jobs are stored as <b>Future</b> objects to enable the Result retriever component to poll for results. <br>
 Only the job dispatcher component can read the queue.
 
