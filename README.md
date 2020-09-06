@@ -25,3 +25,10 @@ If that's the case, a new Job is created and submited to the Job queue.<br>
 After finishing a scan cycle, the component pauses before the next scan for a specified (configuration file) amount of time.
 
 ### Job queue:
+The components directory crawler, CLI and web scanner can currently write to the Job queue.<br>
+Jobs are stored as <b>Future</b> objects to enable the Result retriever component to poll for results. <br>
+Only the job dispatcher component can read the queue.
+
+### Job dispatcher:
+This component delegates jobs to the appropriate thread pool component (File and Web scanner).<br>
+The component is blocked if the job queue is empty.
