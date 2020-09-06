@@ -1,5 +1,5 @@
 # Concurrent-Keyword-Counter
-A console application that concurrently scans/crawls directories and web pages and counts specified keywords.
+A component based console application that concurrently scans/crawls directories and web pages and counts specified keywords.
 
 ## Overview
 The system consists of several components working concurrently in conjunction. Some components are <b> thread pool </b> based, and other run in their own separate threads.
