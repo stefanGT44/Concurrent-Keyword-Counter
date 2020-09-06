@@ -12,7 +12,10 @@ The system consists of several components working concurrently in conjunction. S
 * Main/CLI (command line interface)
 * Job dispatcher
 * Directory crawler
+
 There is also a shared <b>blocking queue</b> - Job queue, used for assigning and starting jobs.
+![Alt text](images/image.png?raw=true "")
+
 
 ## Overview
 The system consists of several components that work in conjunction. 
