@@ -42,4 +42,6 @@ Every web job task does the following:
 Already scanned urls are skipped. After a specified duration (config file) the list of scanned urls is cleared.
 
 ### File scanner:
-After the dispatcher submits a job the the file scanner, an InitiateTask is created for 
+After the dispatcher submits a job to the file scanner, it is calculated how many scanning tasks will be created for the job. <br>
+(A minimum byte limit must be reached for a task in order to create a new one)<br>
+New tasks 
