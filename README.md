@@ -57,6 +57,7 @@ The user can ask for results with the following commands: <br>
 * <b>get file|directory_name</b> - returns results for specified corpus<br>
 * <b>query web|url or domain</b> - returns results (if available) of specific url or summ result for a domain<br>
 (When fetching web results for a domain, the result retriever initiates tasks for summing the results of all urls with that domain name)<br><br>
+
 The user can also ask for the results summary:
 * <b>query file|summary</b><br>
 * <b>get web|summary</b><br>
