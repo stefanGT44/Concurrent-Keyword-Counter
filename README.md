@@ -4,7 +4,7 @@ A component based console application that concurrently scans/crawls directories
 ## Overview
 The system consists of several components working concurrently in conjunction. Some components are <b> thread pool </b> based, and other run in their own separate threads.<br><br>
 The user provides directories and web pages for scanning.<br>
-Web page scans continue (in depth) on all newly found links on the current page. (hop_count parameter in the config file)<br>
+Web page scans continue (in depth) on all newly found links on the current page.<br>
 The user can also get or query (poll) different kinds of results (file corpus, url, domain, summary etc).
 The system gracefully handles errors and provides feedback to users.
 
