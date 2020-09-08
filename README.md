@@ -25,7 +25,7 @@ There is also a shared <b>blocking queue</b> - Job queue, used for assigning and
 ### Directory crawler:
 This component recursively scans directories, the user provided, for text corpuses (directories with a prefix "corpus_" which contain text files). <br>
 After finding a corpus, it is checked if the <u>Last modified</u> directory attribute has changed since the last scan. <br> 
-If that's the case, a new Job is created and submited to the Job queue.<br>
+If that's the case, a new Job is created and submitted to the Job queue.<br>
 After finishing a scan cycle the component pauses (duration specified in the config file) before starting the next scan.
 
 ### Job (blocking) queue:
@@ -34,11 +34,11 @@ Only the job dispatcher component can read the queue.
 
 ### Job dispatcher:
 This component delegates jobs to the appropriate thread pool component (File/Web scanner).<br>
-Jobs are submited as InitiateTaks which pass <b>Future</b> objects to the Result retriever component which can then poll for results<br>
+Jobs are submitted as InitiateTaks which pass <b>Future</b> objects to the Result retriever component which can then poll for results<br>
 The component is blocked if the job queue is empty.
 
 ### Web scanner:
-The user initiates a new web scanning job by submiting a website url and hop count using the CLI. <br>
+The user initiates a new web scanning job by submitting a website url and hop count using the CLI. <br>
 After the dispatcher submits a job to the web scanner , web scanning begins.<br>
 Every web job task does the following:
 1. Count the specified keywords on the given website
@@ -48,18 +48,18 @@ Already scanned urls are skipped. After a specified duration (config file) the l
 ### File scanner:
 After the dispatcher submits a job to the file scanner (<b>ForkJoinPool</b>), the job is divided into smaller chunks. <br>
 <b>RecursiveTasks</b> divide the job, count keywords and finally combine the results.</b>
-The job is divided untill the byte limiti (specified in the config file) is satisfied for each task.
+The job is divided until the byte limit (specified in the config file) is satisfied for each task.
 
 ### Result retriever:
 This component fetches results and does some simple operations with them.<br>
 The user communicates with this component via the CLI. <br>
 There are two types of requests:
-1. Get (blocking command - waits untill results are ready)
+1. Get (blocking command - waits until results are ready)
 2. Query (Returns results if they are ready, otherwise not ready message is returned)
 
 The user can ask for results with the following commands: <br>
 * <b>get file|directory_name</b> - returns results of the specified corpus<br>
-* <b>query web|url or domain</b> - returns results (if available) of the specified url or the summ results for the specified domain<br>
+* <b>query web|url or domain</b> - returns results (if available) of the specified url or the sum results for the specified domain<br>
 (When fetching web results for a domain, the result retriever initiates tasks for summing the results of all urls with that domain name)<br>
 
 The user can also ask for the result summary:
@@ -103,7 +103,7 @@ url_refresh_time=86400000 - list of visited urls is cleared<br>
 ![Alt text](images/example4.png?raw=true "")<br>
 
 ## Sidenote
-This project was an assignment as a part of the course - Concurrent and Distributed Systems during the 8th semester at the Faculty of Computer Science in Belgrade. All system functionallities were defined in the assignment specifications.
+This project was an assignment as a part of the course - Concurrent and Distributed Systems during the 8th semester at the Faculty of Computer Science in Belgrade. All system functionalities were defined in the assignment specifications.
 
 ## Download
 You can download the .jar files [here](download/Concurrent-Keyword-Counter.zip).<br>
