@@ -42,7 +42,7 @@ Every web job task does the following:
 Already scanned urls are skipped. After a specified duration (config file) the list of scanned urls is cleared.
 
 ### File scanner:
-After the dispatcher submits a job to the file scanner (<b>ForkJoinPool), the job is divided into smaller chunks. <br>
+After the dispatcher submits a job to the file scanner (<b>ForkJoinPool</b>), the job is divided into smaller chunks. <br>
 <b>RecursiveTasks</b> divide the job, count keywords and finally combine the results.</b>
 The job is divided untill the byte limiti (specified in the config file) is satisfied for each task.
 
