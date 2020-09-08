@@ -54,7 +54,7 @@ There are two types of requests:
 2. Query (Returns results if they are ready, otherwise not ready message is returned)
 
 The user can ask for results with the following commands: <br>
-* <b>get file|directory_name</b> - returns results for specified corpus<br>
+* <b>get file|directory_name</b> - returns results of the specified corpus<br>
 * <b>query web|url or domain</b> - returns results (if available) of the specified url or the summ results for the specified domain<br>
 (When fetching web results for a domain, the result retriever initiates tasks for summing the results of all urls with that domain name)<br>
 
@@ -64,7 +64,7 @@ The user can also ask for the result summary:
 Specific tasks for calculating the summary are created. (The summary is stored once it is calculated)
 
 ### CLI:
-All supported commands:
+Supported commands:
 * ad directory_path - adds the directory to the list of directories that the crawler component searches for text corpuses (text corpus directories that contain text files must have corpus_ prefix to be found)
 * aw url - initiates a web scan for the provided url (hop count is taken from config file)
 * get file|corpus_name
@@ -72,7 +72,7 @@ All supported commands:
 * get web|corpus_url
 * query web|corpus_url
 * get web|corpus_domain
-* query web|corpus|domain
+* query web|corpus_domain
 * get file|summary
 * query file|summary
 * get web|summary
@@ -81,3 +81,11 @@ All supported commands:
 * cws - clear web summary
 * stop - exit the application
   
+### Configuration file (app.properties):
+Parameters are read during app start and cannot be changed during app operation.
+keywords=one,two,thre - list of keywords to be counted
+file_corpus_prefix=corpus_ - the expected prefix for text corpus directories
+dir_crawler_sleep_time=1000 - directoriy crawler pause duration
+file_scanning_size_limit=1048576 - limit for file scanner tasks given in bytes
+hop_count=2 - number of hops the web scanner does (depth)
+url_refresh_time=86400000 - list of visited urls is cleared
