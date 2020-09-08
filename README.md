@@ -7,9 +7,6 @@ The user provides directories and web pages that will be scanned, and can get or
 Based on the specified hop_number value (config file), initiated web scans continue on newly found links (in depth).<br>
 The system gracefully handles errors and provides feedback to users.
 
-![Alt text](images/example3.png?raw=true "")<br><br>
-![Alt text](images/example4.png?raw=true "")<br>
-
 #### Thread pool based components:
 * Web Scanner
 * File Scanner
@@ -21,6 +18,11 @@ The system gracefully handles errors and provides feedback to users.
 
 There is also a shared <b>blocking queue</b> - Job queue, used for assigning and starting jobs.
 ![Alt text](images/image.png?raw=true "")
+
+## Usage example:
+
+![Alt text](images/example3.png?raw=true "")<br><br>
+![Alt text](images/example4.png?raw=true "")<br>
 
 ## Component details:
 
