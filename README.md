@@ -34,11 +34,11 @@ Jobs are submited as InitiateTaks which pass <b>Future</b> objects to the Result
 The component is blocked if the job queue is empty.
 
 ### Web scanner:
-The user initiates a new web scanning job by submiting a website url and jump number using the CLI. <br>
+The user initiates a new web scanning job by submiting a website url and hop count using the CLI. <br>
 After the dispatcher submits a job to the web scanner , web scanning begins.<br>
 Every web job task does the following:
 1. Count the specified keywords on the given website
-2. If the jump number is greater than 0, start new web scanning jobs for all the links found on the given website (new jobs have a decremented jump number)
+2. If the hop count is greater than 0, start new web scanning jobs for all the links found on the given website (new jobs have a decremented hop count)
 Already scanned urls are skipped. After a specified duration (config file) the list of scanned urls is cleared.
 
 ### File scanner:
@@ -58,11 +58,26 @@ The user can ask for results with the following commands: <br>
 * <b>query web|url or domain</b> - returns results (if available) of specific url or summ result for a domain<br>
 (When fetching web results for a domain, the result retriever initiates tasks for summing the results of all urls with that domain name)<br>
 
-The user can also ask for the results summary:
+The user can also ask for the result summary:
 * <b>query file|summary</b><br>
 * <b>get web|summary</b><br>
 Specific tasks for calculating the summary are created. (The summary is stored once it is calculated)
 
 ### CLI:
-
+All supported commands:
+* ad directory_path - adds the directory to the list of directories that the crawler component searches for text corpuses (text corpus directories that contain text files must have corpus_ prefix to be found)
+* aw url - initiates a web scan for the provided url (hop count is taken from config file)
+* get file|corpus_name
+* query file|corpus_name
+* get web|corpus_url
+* query web|corpus_url
+* get web|corpus_domain
+* query web|corpus|domain
+* get file|summary
+* query file|summary
+* get web|summary
+* query web|summary
+* cfs - clear file summary
+* cws - clear web summary
+* stop - exit the application
   
