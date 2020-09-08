@@ -5,7 +5,7 @@ A component based console application that concurrently scans/crawls directories
 The system consists of several components working concurrently in conjunction. Some components are <b> thread pool </b> based, and other run in their own separate threads.<br><br>
 The user provides directories and web pages for scanning.<br>
 Web page scans continue (in depth) on all newly found links on the current page.<br>
-The user can also get or query (poll) different kinds of results (file corpus, url, domain, summary etc).
+The user can also get or query (poll) different kinds of results (file corpus, url, domain, summary etc).<br>
 The system gracefully handles errors and provides feedback to users.
 
 #### Thread pool based components:
@@ -19,11 +19,6 @@ The system gracefully handles errors and provides feedback to users.
 
 There is also a shared <b>blocking queue</b> - Job queue, used for assigning and starting jobs.
 ![Alt text](images/image.png?raw=true "")
-
-## Usage example:
-
-![Alt text](images/example3.png?raw=true "")<br><br>
-![Alt text](images/example4.png?raw=true "")<br>
 
 ## Component details:
 
@@ -99,3 +94,10 @@ dir_crawler_sleep_time=1000 - directoriy crawler pause duration<br>
 file_scanning_size_limit=1048576 - limit for file scanner tasks given in bytes<br>
 hop_count=2 - number of hops the web scanner does (depth)<br>
 url_refresh_time=86400000 - list of visited urls is cleared<br>
+
+## Usage example:
+
+![Alt text](images/example3.png?raw=true "")<br><br><br>
+
+![Alt text](images/example5.png?raw=true "")<br>
+![Alt text](images/example4.png?raw=true "")<br>
