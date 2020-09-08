@@ -24,7 +24,7 @@ After finding a corpus, it is checked if the <u>Last modified</u> directory attr
 If that's the case, a new Job is created and submited to the Job queue.<br>
 After finishing a scan cycle the component pauses (duration specified in the config file) before starting the next scan.
 
-### Job queue:
+### Job (blocking) queue:
 Only the directory crawler, CLI and web scanner can write to the Job queue.<br>
 Only the job dispatcher component can read the queue.
 
