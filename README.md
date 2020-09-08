@@ -101,3 +101,12 @@ url_refresh_time=86400000 - list of visited urls is cleared<br>
 
 ![Alt text](images/example5.png?raw=true "")<br>
 ![Alt text](images/example4.png?raw=true "")<br>
+
+## Sidenote
+This project was an assignment as a part of the course - Concurrent and Distributed Systems during the 8th semester at the Faculty of Computer Science in Belgrade. All system functionallities were defined in the assignment specifications.
+
+## Download
+You can download the .jar files [here](download/Concurrent-Keyword-Counter.zip).<br>
+
+## Contributors
+- Stefan Ginic - <stefangwars@gmail.com>
