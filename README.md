@@ -82,8 +82,8 @@ Supported commands:
 * stop - exit the application
   
 ### Configuration file (app.properties):
-Parameters are read during app start and cannot be changed during app operation.<br>
-File structure: <br>
+Parameters are read during app start and cannot be changed during app operation.<br><br>
+File structure: <br><br>
 keywords=one,two,thre - list of keywords to be counted<br>
 file_corpus_prefix=corpus_ - the expected prefix for text corpus directories<br>
 dir_crawler_sleep_time=1000 - directoriy crawler pause duration<br>
