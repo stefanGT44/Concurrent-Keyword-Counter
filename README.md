@@ -82,10 +82,11 @@ Supported commands:
 * stop - exit the application
   
 ### Configuration file (app.properties):
-Parameters are read during app start and cannot be changed during app operation.
-keywords=one,two,thre - list of keywords to be counted
-file_corpus_prefix=corpus_ - the expected prefix for text corpus directories
-dir_crawler_sleep_time=1000 - directoriy crawler pause duration
-file_scanning_size_limit=1048576 - limit for file scanner tasks given in bytes
-hop_count=2 - number of hops the web scanner does (depth)
-url_refresh_time=86400000 - list of visited urls is cleared
+Parameters are read during app start and cannot be changed during app operation.<br>
+File structure: <br>
+keywords=one,two,thre - list of keywords to be counted<br>
+file_corpus_prefix=corpus_ - the expected prefix for text corpus directories<br>
+dir_crawler_sleep_time=1000 - directoriy crawler pause duration<br>
+file_scanning_size_limit=1048576 - limit for file scanner tasks given in bytes<br>
+hop_count=2 - number of hops the web scanner does (depth)<br>
+url_refresh_time=86400000 - list of visited urls is cleared<br>
