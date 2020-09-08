@@ -55,7 +55,7 @@ There are two types of requests:
 
 The user can ask for results with the following commands: <br>
 * <b>get file|directory_name</b> - returns results for specified corpus<br>
-* <b>query web|url or domain</b> - returns results (if available) of specific url or summ result for a domain<br>
+* <b>query web|url or domain</b> - returns results (if available) of the specified url or the summ results for the specified domain<br>
 (When fetching web results for a domain, the result retriever initiates tasks for summing the results of all urls with that domain name)<br>
 
 The user can also ask for the result summary:
