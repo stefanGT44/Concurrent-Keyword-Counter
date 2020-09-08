@@ -52,13 +52,14 @@ The user communicates with this component via the CLI. <br>
 There are two types of requests:
 1. Get (blocking command - waits untill results are ready)
 2. Query (Returns results if they are ready, otherwise not ready message is returned)
-The user can ask for results with the following command: <br>
-<b>get file|directory_name</b> - returns results for specified corpus<br>
-<b>query web|url or domain</b> - returns results of specific url or summ result for a domain<br>
+
+The user can ask for results with the following commands: <br>
+* <b>get file|directory_name</b> - returns results for specified corpus<br>
+* <b>query web|url or domain</b> - returns results (if available) of specific url or summ result for a domain<br>
 When fetching web results for a domain, the result retriever initiates tasks for summing the results of all urls with that domain name.<br>
 The user can also ask for the results summary:
-<b>query file|summary</b><br>
-<b>get web|summary</b><br>
+* <b>query file|summary</b><br>
+* <b>get web|summary</b><br>
 Specific tasks for calculating the summary are created. (The summary is stored once it is calculated)
 
 ### CLI:
