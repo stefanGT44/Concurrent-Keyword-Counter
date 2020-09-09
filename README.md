@@ -33,7 +33,7 @@ Only the directory crawler, CLI and web scanner can write to the Job queue.<br>
 Only the job dispatcher component can read the queue.
 
 ### Job dispatcher:
-This component delegates jobs to the appropriate thread pool component (File/Web scanner).<br>
+This component delegates jobs from the job queue to the appropriate thread pool component (File/Web scanner).<br>
 Jobs are submitted as InitiateTaks which pass <b>Future</b> objects to the Result retriever component which can then poll for results<br>
 The component is blocked if the job queue is empty.
 
