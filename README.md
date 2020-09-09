@@ -24,8 +24,8 @@ There is also a shared <b>blocking queue</b> - Job queue, used for temporarily s
 
 ### Directory crawler:
 This component recursively scans directories, that the user provided, for text corpuses (directories with a prefix "corpus_" which contain text files). <br>
-After finding a corpus, it is checked if the <u>Last modified</u> directory attribute has changed since the last scan. <br> 
-If that's the case, a new Job is created and submitted to the Job queue.<br>
+After finding a corpus a new Job is created and submitted to the Job queue.<br>
+The last modified value of corpus directories is tracked, so if a directory has been modified, it is scanned again. <br>
 After finishing a scan cycle the component pauses (duration specified in the config file) before starting the next scan.
 
 ### Job (blocking) queue:
