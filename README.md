@@ -17,7 +17,7 @@ The system gracefully handles errors and provides feedback to users.
 * Job dispatcher
 * Directory crawler
 
-There is also a shared <b>blocking queue</b> - Job queue, used for assigning and starting jobs.
+There is also a shared <b>blocking queue</b> - Job queue, used for temporarily storing created jobs.
 ![Alt text](images/image.png?raw=true "")
 
 ## Component details:
