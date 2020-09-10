@@ -2,7 +2,7 @@
 A component based console application that concurrently scans/crawls directories and web pages and counts specified keywords.
 
 ## Overview
-The system consists of several components working concurrently in conjunction. Some components are <b> thread pool </b> based, and other run in their own separate threads.<br><br>
+The system consists of several components that are working concurrently in conjunction. Some components are <b> thread pool </b> based, and other run in their own separate threads.<br><br>
 The user provides directories and web pages for scanning.<br>
 Web page scans continue (in depth) on all newly found links on the current page.<br>
 The user can also get or query (poll) different kinds of results (file corpus, url, domain, summary etc).<br>
