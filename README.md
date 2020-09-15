@@ -51,7 +51,7 @@ After the dispatcher submits a job to the file scanner (<b>ForkJoinPool</b>), th
 The job is divided until the byte limit (specified in the config file) is satisfied for each task.
 
 ### Result retriever:
-This component fetches results and does some simple operations with them.<br>
+This component fetches results and is capable of doing some simple operations on them.<br>
 The user communicates with this component via the CLI. <br>
 There are two types of requests:
 1. Get (blocking command - waits until results are ready)
